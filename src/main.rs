@@ -5,14 +5,19 @@ async fn main() {
     use axum::Router;
     use leptos::logging::log;
     use leptos::prelude::*;
-    use leptos_axum::{generate_route_list, LeptosRoutes};
+    use leptos_axum::{generate_route_list_with_ssg, LeptosRoutes};
     use rust_peru::app::*;
 
     let conf = get_configuration(None).unwrap();
     let addr = conf.leptos_options.site_addr;
     let leptos_options = conf.leptos_options;
     // Generate the list of routes in your Leptos App
-    let routes = generate_route_list(App);
+    let (routes, static_route_generator) = generate_route_list_with_ssg({
+        let leptos_options = leptos_options.clone();
+        move || shell(leptos_options.clone())
+    });
+
+    static_route_generator.generate(&leptos_options).await;
 
     let app = Router::new()
         .leptos_routes(&leptos_options, routes, {

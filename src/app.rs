@@ -1,8 +1,7 @@
 use leptos::prelude::*;
 use leptos_meta::{provide_meta_context, MetaTags, Stylesheet, Title};
 use leptos_router::{
-    components::{Route, Router, Routes},
-    StaticSegment,
+    components::{Route, Router, Routes}, static_routes::StaticRoute, SsrMode, StaticSegment
 };
 use reactive_stores::Store;
 
@@ -39,13 +38,13 @@ pub fn App() -> impl IntoView {
         <Stylesheet id="leptos" href="/pkg/rust-peru.css"/>
 
         // sets the document title
-        <Title text="Welcome to Leptos"/>
+        <Title text="Rust Perú"/>
 
         // content for this welcome page
         <Router>
             <main>
                 <Routes fallback=|| "Page not found.".into_view()>
-                    <Route path=StaticSegment("") view=HomePage/>
+                    <Route path=StaticSegment("") view=HomePage ssr=SsrMode::Static(StaticRoute::new())/>
                 </Routes>
             </main>
         </Router>
