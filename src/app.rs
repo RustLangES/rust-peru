@@ -6,7 +6,7 @@ use leptos_router::{
 };
 use reactive_stores::Store;
 
-use crate::{components::templates::{aprende::AprendeSection, drawer::Drawer, hero::Hero}, models::global_state::{AppState, AppStateStoreFields}};
+use crate::{components::templates::{aprende::AprendeSection, drawer::Drawer, hero::Hero}, models::global_state::AppState};
 
 pub fn shell(options: LeptosOptions) -> impl IntoView {
     view! {

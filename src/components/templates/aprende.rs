@@ -1,17 +1,10 @@
 use leptos::prelude::*;
-use reactive_stores::Store;
-
-use crate::{app, components::atoms::section_separator::Separator, models::global_state::{AppState, AppStateStoreFields}};
 
 #[island]
 pub fn AprendeSection() -> impl IntoView {
-    let app_state = expect_context::<Store<AppState>>();
-
 
     view! {
-        // Two columns
         <section class="grid md:grid-cols-2 gap-4 p-5">
-            // one column with information
             <div class="flex flex-col gap-5 justify-center items-center p-4 md:py-12 mx-5">
                 <h3 class="text-3xl font-bold text-center">"¡Aprende Rust con nosotros!"</h3>
                 <p class="text-center">"En Rust Perú, fomentamos la participación, la integración, la colaboración y la diversidad en la comunidad. Nuestro objetivo es promover la adopción de Rust en el Perú y en la región, a través de la educación, la formación y la colaboración."</p>
@@ -32,7 +25,6 @@ pub fn AprendeSection() -> impl IntoView {
                   <p>"¡Podría ser una gran oportunidad!"</p>
                 </div>
             </div>
-            // one column with images
             <div class="p-3">
                 <div class="relative flex flex-row sm:block columns-1 sm:columns-3 gap-1 md:gap-8">
                     <div class="relative aspect-w-16 aspect-h-9">

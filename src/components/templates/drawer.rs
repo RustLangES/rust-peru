@@ -1,7 +1,7 @@
 use leptos::prelude::*;
 use reactive_stores::Store;
 
-use crate::{app, models::global_state::{AppState, AppStateStoreFields}};
+use crate::models::global_state::{AppState, AppStateStoreFields};
 
 #[island]
 pub fn Drawer() -> impl IntoView {
