@@ -10,67 +10,57 @@ pub fn AprendeSection() -> impl IntoView {
 
     view! {
         // Two columns
-        <section class="grid md:grid-cols-2">
+        <section class="grid md:grid-cols-2 gap-4 p-5">
             // one column with information
-            <div class="flex flex-col justify-center items-center p-4 md:py-12">
+            <div class="flex flex-col gap-5 justify-center items-center p-4 md:py-12 mx-5">
                 <h3 class="text-3xl font-bold text-center">"¡Aprende Rust con nosotros!"</h3>
-                <p class="text-center">En Rust Perú, te ofrecemos una serie de recursos para que puedas aprender Rust de manera sencilla y divertida.</p>
+                <p class="text-center">"En Rust Perú, fomentamos la participación, la integración, la colaboración y la diversidad en la comunidad. Nuestro objetivo es promover la adopción de Rust en el Perú y en la región, a través de la educación, la formación y la colaboración."</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="bg-gray-800 text-white p-4 rounded-lg">
-                        <h4 class="text-2xl font-bold">Cursos</h4>
-                        <p>En Rust Perú, te ofrecemos una serie de cursos para que puedas aprender Rust de manera sencilla y divertida.</p>
+                    <div class="bg-orange-oxided-200 text-black p-4 rounded-lg font-inter">
+                        <h4 class="text-2xl font-bold mb-2">Comunidad</h4>
+                        <p>"La comunidad de Rust Perú es muy activa y siempre está dispuesta a ayudarte. Si tienes alguna duda, pregunta o sugerencia, no dudes en contactarnos, siempre estamos a un mensaje de distancia."</p>
                     </div>
-                    // <div class="bg-gray-800 text-white p-4 rounded-lg">
-                    //     <h4 class="text-2xl font-bold">Talleres</h4>
-                    //     <p>En Rust Perú, te ofrecemos una serie de talleres para que puedas aprender Rust de manera sencilla y divertida.</p>
-                    // </div>
-                    // <div class="bg-gray-800 text-white p-4 rounded-lg">
-                    //     <h4 class="text-2xl font-bold">Charlas</h4>
-                    //     <p>En Rust Perú, te ofrecemos una serie de charlas para que puedas aprender Rust de manera sencilla y divertida.</p>
-                    // </div>
-                    <div class="bg-gray-800 text-white p-4 rounded-lg">
-                        <h4 class="text-2xl font-bold">Comunidad</h4>
-                        <p>En Rust Perú, te ofrecemos una serie de recursos para que puedas aprender Rust de manera sencilla y divertida.</p>
+                    <div class="bg-orange-oxided-200 text-black p-4 rounded-lg font-inter">
+                      <h4 class="text-2xl font-bold mb-2">Charlas</h4>
+                      <p>"En Rust Perú, solemos realizar charlas y eventos para que puedas aprender Rust de manera sencilla y divertida. A veces en lugares públicos, a veces en línea y en otras ocasiones en empresas o coworkings que nos detinan un espacio."</p>
                     </div>
+                </div>
+                <div class="bg-orange-oxided-100 bg-blend-darken bg-call-to-action bg-cover text-black p-4 rounded-lg font-inter max-w-lg flex flex-col items-center justify-center gap-2">
+                  <h4 class="text-2xl font-bold mb-2">"Call to Action"</h4>
+                  <p>"Si quieres dar un paso en tu carrera profesional, volverte divulgador, o simplemente quieres compartir algo, ¡No dudes!"</p>
+                  <p>"Siempre estamos buscando personas que quieran compartir sus conocimientos, experiencias y proyectos con la comunidad."</p>
+                  <p>"¡Podría ser una gran oportunidad!"</p>
                 </div>
             </div>
             // one column with images
-            <div>
-                <div class="relative columns-1 sm:columns-3 gap-8">
+            <div class="p-3">
+                <div class="relative flex flex-row sm:block columns-1 sm:columns-3 gap-1 md:gap-8">
                     <div class="relative aspect-w-16 aspect-h-9">
                       <img class="w-full object-cover rounded-lg" src="./assets/images/RustMX2018.png" />
-                      <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
+                      <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg  h-fit"></div>
                     </div>
-                    <div class="relative aspect-w-1 aspect-h-1 mt-8">
+                    <div class="relative aspect-w-1 aspect-h-1 md:mt-8">
                       <img class="w-full object-cover rounded-lg" src="./assets/images/Peru2024.png" />
-                      <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
+                      <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg h-fit"></div>
                     </div>
-                    <div class="relative aspect-w-1 aspect-h-1 mt-8">
+                    <div class="relative aspect-w-1 aspect-h-1 md:mt-8">
                       <img class="w-full object-cover rounded-lg" src="./assets/images/MX2024v2.png" />
-                      <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
+                      <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg  h-fit"></div>
                     </div>
                     <div class="hidden sm:block relative aspect-w-1 aspect-h-1 mt-8 sm:mt-0">
-                      <img class="w-full object-cover rounded-lg" src="./assets/images/MX2024.jpg" />
+                      <img class="w-full object-cover rounded-lg" src="./assets/images/MX2024.png" />
                       <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
                     </div>
                     <div class="hidden sm:block relative aspect-w-16 aspect-h-9 mt-8">
-                      <img class="w-full object-cover rounded-lg" src="https://images.unsplash.com/photo-1611605645802-c21be743c321?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2940&amp;q=80" />
-                      <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
-                    </div>
-                    <div class="hidden sm:block relative aspect-w-1 aspect-h-1 mt-8">
-                      <img class="w-full object-cover rounded-lg" src="https://images.unsplash.com/photo-1498603993951-8a027a8a8f84?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2936&amp;q=80" />
-                      <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
-                    </div>
-                    <div class="hidden sm:block relative aspect-w-1 aspect-h-1 mt-8 sm:mt-0">
-                      <img class="w-full object-cover rounded-lg" src="https://images.unsplash.com/photo-1526400473556-aac12354f3db?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2940&amp;q=80" />
-                      <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
-                    </div>
-                    <div class="hidden sm:block relative aspect-w-1 aspect-h-1 mt-8">
-                      <img class="w-full object-cover rounded-lg" src="https://images.unsplash.com/photo-1617369120004-4fc70312c5e6?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1587&amp;q=80" />
+                      <img class="w-full object-cover rounded-lg" src="./assets/images/nerdearla2024.png" />
                       <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
                     </div>
                     <div class="hidden sm:block relative aspect-w-16 aspect-h-9 mt-8">
-                      <img class="w-full object-cover rounded-lg" src="https://images.unsplash.com/photo-1518892096458-a169843d7f7f?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2940&amp;q=80" />
+                      <img class="w-full object-cover rounded-lg" src="./assets/images/sergio2024.png" />
+                      <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
+                    </div>
+                    <div class="hidden sm:block relative aspect-w-16 aspect-h-9 mt-8">
+                      <img class="w-full object-cover rounded-lg" src="./assets/images/sticker.jpg" />
                       <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
                     </div>
                   </div>

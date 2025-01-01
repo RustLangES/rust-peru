@@ -11,10 +11,12 @@ use crate::{components::templates::{aprende::AprendeSection, drawer::Drawer, her
 pub fn shell(options: LeptosOptions) -> impl IntoView {
     view! {
         <!DOCTYPE html>
-        <html lang="en">
+        <html lang="es">
             <head>
                 <meta charset="utf-8"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <meta name="description" content="Rust Perú"/>
+                <link rel="icon" href="/assets/images/icon.png" type="image/png"/>
                 <AutoReload options=options.clone() />
                 <HydrationScripts options islands=true/>
                 <MetaTags/>

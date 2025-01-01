@@ -64,6 +64,12 @@ module.exports = {
       backgroundImage: {
         'machu-picchu': "url('/background2.jpg')",
         'peru-flag': "url('/peru2.png')",
+        'call-to-action': "url('/assets/images/cta.png')",
+      },
+      listStyleImage: {
+        'learning': "url('/assets/images/ferris_thinking.png')",
+        'book': "url('/assets/images/ferris_book.png')",
+        'communities': "url('/assets/images/ferris_communities.png')",
       }
     },
   },

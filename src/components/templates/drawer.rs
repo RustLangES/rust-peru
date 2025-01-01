@@ -32,9 +32,38 @@ pub fn Drawer() -> impl IntoView {
             <div
                 class=("translate-x-0", move || app_state.is_open().get())
                 class=("-translate-x-full", move || !app_state.is_open().get()) 
-                class="fixed top-0 left-0 h-screen w-64 bg-gray-800 text-white p-4 shadow-lg transform transition-transform duration-300"
+                class="fixed z-50 top-0 left-0 h-screen w-64 bg-gray-800 text-white p-4 shadow-lg transform transition-transform duration-300 flex justify-between flex-col"
             >
-                olaaaa
+                <div class="h-full">
+                    <div class="p-5">
+                        <img src="/logo.png" width="640" height="640" class="size-24 rounded-full mx-auto" />
+                        <h2 class="font-bold mt-4 font-akira text-xl">Rust Perú</h2>
+                        <nav class="text-left mt-4 px-2">
+                            <ul class="space-y-2 list-disc">
+                                <li class="list-image-learning">
+                                    <a href="https://rustlang-es.org/aprende" class="align-super text-white hover:text-blue-500">"Aprende"</a>
+                                </li>
+                                <li class="list-image-book">
+                                    <a href="https://book.rustlang-es.org/" class="block text-white hover:text-blue-500">"El libro"</a>
+                                </li>
+                                <li class="list-image-communities">
+                                    <a href="https://rustlang-es.org/comunidades" class="block text-white hover:text-blue-500">"Otras Comunidades"</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="mt-4">
+                        <p>"Únete a nuestra comunidad de Telegram"</p>
+                        // https://img.shields.io/aur/popularity/asd?style=flat&logo=telegram&logoColor=white&label=Miembros&labelColor=black&color=neon
+                        // (https://img.shields.io/endpoint?color=neon&style=flat&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Frustperu)](https://t.me/rustperu)
+                        <a href="https://t.me/rustperu" class="bg-neon-500 text-white p-2 rounded-lg">
+                            <img src="https://img.shields.io/endpoint?color=neon&style=flat&url=https://mogyo.ro/quart-apis/tgmembercount?chat_id=rustperu" class="mx-auto" />
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <p>"Hecho por la comunidad de Rust Perú con apoyo de "<a href="https://rustlang-es.org/" class="text-blue-500">"RustLang en Español"</a></p>
+                </div>
             </div>
         </div>
     }
