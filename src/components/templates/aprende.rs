@@ -28,31 +28,31 @@ pub fn AprendeSection() -> impl IntoView {
             <div class="p-3">
                 <div class="relative flex flex-row sm:block columns-1 sm:columns-3 gap-1 md:gap-8">
                     <div class="relative aspect-w-16 aspect-h-9">
-                      <img class="w-full object-cover rounded-lg" src="./assets/images/RustMX2018.png" />
+                      <img class="w-full object-cover rounded-lg" src="./assets/images/RustMX2018.webp" />
                       <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg  h-fit"></div>
                     </div>
                     <div class="relative aspect-w-1 aspect-h-1 md:mt-8">
-                      <img class="w-full object-cover rounded-lg" src="./assets/images/Peru2024.png" />
+                      <img class="w-full object-cover rounded-lg" src="./assets/images/Peru2024.webp" />
                       <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg h-fit"></div>
                     </div>
                     <div class="relative aspect-w-1 aspect-h-1 md:mt-8">
-                      <img class="w-full object-cover rounded-lg" src="./assets/images/MX2024v2.png" />
+                      <img class="w-full object-cover rounded-lg" src="./assets/images/MX2024v2.webp" />
                       <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg  h-fit"></div>
                     </div>
                     <div class="hidden sm:block relative aspect-w-1 aspect-h-1 mt-8 sm:mt-0">
-                      <img class="w-full object-cover rounded-lg" src="./assets/images/MX2024.png" />
+                      <img class="w-full object-cover rounded-lg" src="./assets/images/MX2024.webp" />
                       <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
                     </div>
                     <div class="hidden sm:block relative aspect-w-16 aspect-h-9 mt-8">
-                      <img class="w-full object-cover rounded-lg" src="./assets/images/nerdearla2024.png" />
+                      <img class="w-full object-cover rounded-lg" src="./assets/images/nerdearla2024.webp" />
                       <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
                     </div>
                     <div class="hidden sm:block relative aspect-w-16 aspect-h-9 mt-8">
-                      <img class="w-full object-cover rounded-lg" src="./assets/images/sergio2024.png" />
+                      <img class="w-full object-cover rounded-lg" src="./assets/images/sergio2024.webp" />
                       <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
                     </div>
                     <div class="hidden sm:block relative aspect-w-16 aspect-h-9 mt-8">
-                      <img class="w-full object-cover rounded-lg" src="./assets/images/sticker.jpg" />
+                      <img class="w-full object-cover rounded-lg" src="./assets/images/sticker.webp" />
                       <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
                     </div>
                   </div>

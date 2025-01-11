@@ -62,9 +62,9 @@ module.exports = {
         'inter': ['Inter', 'sans-serif'],
       },
       backgroundImage: {
-        'machu-picchu': "url('/background2.jpg')",
+        'machu-picchu': "url('/background2.avif')",
         'peru-flag': "url('/peru2.png')",
-        'call-to-action': "url('/assets/images/cta.png')",
+        'call-to-action': "url('/assets/images/cta.avif')",
       },
       listStyleImage: {
         'learning': "url('/assets/images/ferris_thinking.png')",

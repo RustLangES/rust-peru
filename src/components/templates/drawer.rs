@@ -36,7 +36,7 @@ pub fn Drawer() -> impl IntoView {
             >
                 <div class="h-full">
                     <div class="p-5">
-                        <img src="/logo.png" width="640" height="640" class="size-24 rounded-full mx-auto" />
+                        <img src="/logo.webp" width="640" height="640" class="size-24 rounded-full mx-auto" />
                         <h2 class="font-bold mt-4 font-akira text-xl">Rust Perú</h2>
                         <nav class="text-left mt-4 px-2">
                             <ul class="space-y-2 list-disc">
@@ -54,8 +54,6 @@ pub fn Drawer() -> impl IntoView {
                     </div>
                     <div class="mt-4">
                         <p>"Únete a nuestra comunidad de Telegram"</p>
-                        // https://img.shields.io/aur/popularity/asd?style=flat&logo=telegram&logoColor=white&label=Miembros&labelColor=black&color=neon
-                        // (https://img.shields.io/endpoint?color=neon&style=flat&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Frustperu)](https://t.me/rustperu)
                         <a href="https://t.me/rustperu" class="bg-neon-500 text-white p-2 rounded-lg">
                             <img src="https://img.shields.io/endpoint?color=neon&style=flat&url=https://mogyo.ro/quart-apis/tgmembercount?chat_id=rustperu" class="mx-auto" />
                         </a>
