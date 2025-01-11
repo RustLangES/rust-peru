@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/workflows/pages.yml'
+      - '.github/workflows/deploy.yml'
       - 'src/**.rs'
       - 'build.rs'
       - 'input.css'
@@ -23,7 +23,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
         with:
           submodules: "recursive"
       - uses: dtolnay/rust-toolchain@stable
@@ -39,7 +39,7 @@ jobs:
       - name: Build
         run: |
           cargo install --locked cargo-leptos
-          cargo leptos serve -r
+          RUSTFLAGS="--cfg erase_components" cargo leptos serve -r
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
@@ -49,10 +49,15 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - uses: actions/checkout@v3
       - uses: actions/download-artifact@v4
+      - name: Show artifact
+        run: |
+          ls -l .
+          ls -l ./artifact
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy ./artifact --project-name=homepage
+          command: pages deploy ./artifact --project-name=peru
