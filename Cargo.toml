@@ -33,6 +33,10 @@ ssr = [
     "leptos_meta/ssr",
     "leptos_router/ssr",
 ]
+development = []
+
+[target.aarch64-apple-darwin]
+rustflags = [ "-C", "link-arg=-fuse-ld=lld"]
 
 # Defines a size-optimized profile for the WASM bundle in release mode
 [profile.wasm-release]

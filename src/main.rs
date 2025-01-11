@@ -1,7 +1,7 @@
 
 #[cfg(feature = "ssr")]
 #[tokio::main]
-async fn main() {
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
     use axum::Router;
     use leptos::logging::log;
     use leptos::prelude::*;
@@ -19,21 +19,27 @@ async fn main() {
 
     static_route_generator.generate(&leptos_options).await;
 
-    let app = Router::new()
-        .leptos_routes(&leptos_options, routes, {
-            let leptos_options = leptos_options.clone();
-            move || shell(leptos_options.clone())
-        })
-        .fallback(leptos_axum::file_and_error_handler(shell))
-        .with_state(leptos_options);
+    #[cfg(feature = "development")]
+    {
+        let app = Router::new()
+            .leptos_routes(&leptos_options, routes, {
+                let leptos_options = leptos_options.clone();
+                move || shell(leptos_options.clone())
+            })
+            .fallback(leptos_axum::file_and_error_handler(shell))
+            .with_state(leptos_options);
 
-    // run our app with hyper
-    // `axum::Server` is a re-export of `hyper::Server`
-    log!("listening on http://{}", &addr);
-    let listener = tokio::net::TcpListener::bind(&addr).await.unwrap();
-    axum::serve(listener, app.into_make_service())
-        .await
-        .unwrap();
+        // run our app with hyper
+        // `axum::Server` is a re-export of `hyper::Server`
+        log!("listening on http://{}", &addr);
+        let listener = tokio::net::TcpListener::bind(&addr).await.unwrap();
+        axum::serve(listener, app.into_make_service())
+            .await
+            .unwrap();
+        Ok(())
+    }
+    #[cfg(not(feature = "development"))]
+    Ok(())
 }
 
 #[cfg(not(feature = "ssr"))]
