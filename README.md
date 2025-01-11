@@ -1,3 +1,36 @@
+# Rust Perú (WIP)
+
+## ¿Como ejecutar? así:
+
+`cargo install cargo-leptos --locked`
+
+1. `rustup toolchain install nightly` - make sure you have Rust nightly
+2. `rustup target add wasm32-unknown-unknown` - add the ability to compile Rust to WebAssembly
+4. `npm install -g sass` - (Quizás no es necesario, de momento no fue necesario)
+5. `npm install` in end2end subdirectory before test
+
+Levantar servidor de desarrollo:
+`cargo leptos watch --features development`
+
+Buildear:
+
+`RUSTFLAGS="--cfg erase_components" cargo leptos serve -r`
+
+
+## Testeo
+```bash
+cargo leptos end-to-end
+```
+
+```bash
+cargo leptos end-to-end --release
+```
+
+----------
+
+# Original README.md
+
+
 <picture>
     <source srcset="https://raw.githubusercontent.com/leptos-rs/leptos/main/docs/logos/Leptos_logo_Solid_White.svg" media="(prefers-color-scheme: dark)">
     <img src="https://raw.githubusercontent.com/leptos-rs/leptos/main/docs/logos/Leptos_logo_RGB.svg" alt="Leptos Logo">
