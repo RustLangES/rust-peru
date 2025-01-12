@@ -19,6 +19,14 @@ pub fn shell(options: LeptosOptions) -> impl IntoView {
                 <AutoReload options=options.clone() />
                 <HydrationScripts options islands=true/>
                 <MetaTags/>
+                <script type="text/javascript">
+                (function(c,l,a,r,i,t,y){
+                    if ("localhost0.0.0.0::0192.168.0.1192.168.1.1".includes(document.location.hostname)) return;
+                    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                })(window, document, "clarity", "script", "psjd4i0oj8");
+            </script>
             </head>
             <body class="bg-orange-oxided-50 h-screen flex flex-col">
                 <App/>
