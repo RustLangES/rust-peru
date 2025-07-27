@@ -55,7 +55,7 @@ pub fn Drawer() -> impl IntoView {
                     <div class="mt-4">
                         <p>"Únete a nuestra comunidad de Telegram"</p>
                         <a href="https://t.me/rustperu" class="bg-neon-500 text-white p-2 rounded-lg">
-                            <img src="https://img.shields.io/endpoint?color=neon&style=flat&url=https://mogyo.ro/quart-apis/tgmembercount?chat_id=rustperu" class="mx-auto" />
+                            <img src="https://img.shields.io/endpoint?color=neon&style=flat&url=https://tg.sumanjay.workers.dev/rustperu" class="mx-auto" />
                         </a>
                     </div>
                 </div>

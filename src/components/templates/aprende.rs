@@ -36,23 +36,23 @@ pub fn AprendeSection() -> impl IntoView {
                       <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg h-fit"></div>
                     </div>
                     <div class="relative aspect-w-1 aspect-h-1 md:mt-8">
-                      <img class="w-full object-cover rounded-lg" src="./assets/images/MX2024v2.webp" />
+                      <img class="w-full object-cover rounded-lg" src="./assets/images/MX2024v2.avif" />
                       <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg  h-fit"></div>
                     </div>
                     <div class="hidden sm:block relative aspect-w-1 aspect-h-1 mt-8 sm:mt-0">
-                      <img class="w-full object-cover rounded-lg" src="./assets/images/MX2024.webp" />
+                      <img class="w-full object-cover rounded-lg" src="./assets/images/MX2024.avif" />
                       <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
                     </div>
                     <div class="hidden sm:block relative aspect-w-16 aspect-h-9 mt-8">
-                      <img class="w-full object-cover rounded-lg" src="./assets/images/nerdearla2024.webp" />
+                      <img class="w-full object-cover rounded-lg" src="./assets/images/nerdearla2024.avif" />
                       <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
                     </div>
                     <div class="hidden sm:block relative aspect-w-16 aspect-h-9 mt-8">
-                      <img class="w-full object-cover rounded-lg" src="./assets/images/sergio2024.webp" />
+                      <img class="w-full object-cover rounded-lg" src="./assets/images/sergio2024.avif" />
                       <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
                     </div>
                     <div class="hidden sm:block relative aspect-w-16 aspect-h-9 mt-8">
-                      <img class="w-full object-cover rounded-lg" src="./assets/images/sticker.webp" />
+                      <img class="w-full object-cover rounded-lg" src="./assets/images/sticker.avif" />
                       <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-lg"></div>
                     </div>
                   </div>
